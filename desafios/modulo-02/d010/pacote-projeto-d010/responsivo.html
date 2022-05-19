@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: gray;
+        }
+
+        main{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            /*Quando se fixa o tamanho da caixa central e se coloca a margin em auto o elemento fica centralizado e nao atrapalha a leiruta em telas muito grandes. Porém nao tira a rolagem lateral.*/
+            min-width: 280px; /*320 porque as menores telas de celular tem essa largura*/ 
+            max-width: 800px; /*800 porque é um bom tamanho de elementos para telas grandes e telas normais de computadores e tablet.*/
+            margin: auto;
+        }
+
+        img{
+            /*Para a imagem diminuir de acordo com o tamanho da tela, basta colocar a largura da imagem em 100%*/
+            width: 100%;
+        }
+
+
+    </style>
+    <title>Responsividade</title>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis repudiandae necessitatibus optio aliquam repellendus suscipit nemo magni praesentium, hic ducimus sed quibusdam nihil rerum et alias illum libero impedit dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt quod saepe ad cum amet quos, dolores ducimus! Qui porro dolore, placeat ipsum at earum molestias modi culpa! Ut, quas soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi non esse porro quidem, laudantium, iusto debitis quia minus explicabo iste labore quis impedit quas perspiciatis at provident autem nobis. Unde.</p>
+
+        <!--Para resposividade de imagem tratando duas ao mesmo tempo, basta utilizar o pictire com o source media sempre com valor máximo de largra. O source recebe a imagem menor e o img recebe a imagem maior que será usada em telas maiores.-->
+        <picture>
+            <source media="(max-width:600px )" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="">
+        </picture>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis repudiandae necessitatibus optio aliquam repellendus suscipit nemo magni praesentium, hic ducimus sed quibusdam nihil rerum et alias illum libero impedit dicta. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt quod saepe ad cum amet quos, dolores ducimus! Qui porro dolore, placeat ipsum at earum molestias modi culpa! Ut, quas soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi non esse porro quidem, laudantium, iusto debitis quia minus explicabo iste labore quis impedit quas perspiciatis at provident autem nobis. Unde.</p>
+    </main>
+    
+</body>
+</html>
